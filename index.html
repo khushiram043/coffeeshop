@@ -6,11 +6,8 @@
     <title>khushi coffee shop</title>
     <style>
         *{
-            margin: 0%;
+            margin: 15px 15px;
             padding: 0%;
-            box-sizing: border-box;
-            font-family: 'poppins', 'sans-serif';
-            transition: all 0.03s ease;
         }
         body{
             background-color: #d3ccc6;
@@ -20,260 +17,261 @@
         .head{
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 20px 80px;
-            background-color: #f3e6d8;
+            align-items: center;      
+            background-image: url(https://i.pinimg.com/1200x/bc/5d/83/bc5d83435d603dc35583462fe2fb81b7.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .firsth{
+            font-size: 40px;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
         }
 
-.firsth{
-    font-size: 26px;
-    font-weight: 600;
-}
+        .link a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #2e2e2e;
+            font-weight: 800;
+            position: relative;
+            font-size: 25px;
+        }
+        .link a::after{
+            content: '';
+            position: absolute;
+            left: 0%;
+            bottom: -5px;
+            width: 2px;
+            background-color: #a86b3c;
+        }
 
-.link a{
-    margin-left: 25px;
-    text-decoration: none;
-    color: #2e2e2e;
-    font-weight: 500;
-    position: relative;
-}
-
-.link a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 2px;
-    background-color: #a86b3c;
-}
-
-.link a:hover::after{
-    width: 100%;
-}
-
-/* ================= HERO SECTION ================= */
-.firstsec{
-    height: 70vh;
-    background: url("coffee-bg.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding-left: 100px;
-}
-
-.firstdiv{
-    background: rgba(255,255,255,0.85);
-    padding: 30px;
-    border-radius: 15px;
-    animation: fadeSlide 1.5s ease;
-}
-
-@keyframes fadeSlide{
-    0%{
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.homep{
-    color: #a86b3c;
-}
-
-.homeh{
-    font-size: 38px;
-    margin: 10px 0 20px;
-}
-
-.homebut{
-    padding: 10px 30px;
-    border: none;
-    background-color: #a86b3c;
-    color: white;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-.homebut:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ================= ICON SECTION ================= */
-.secondsec{
-    padding: 50px 80px;
-}
-
-.coffeepic{
-    display: flex;
-    justify-content: space-between;
-}
-
-.coffeepic img{
-    width: 60px;
-}
-
-.coffeepic img:hover{
-    transform: rotate(10deg) scale(1.2);
-}
-
-/* ================= COFFEE ITEMS ================= */
-.therdsec{
-    padding: 40px 80px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 25px;
-}
-
-.therdsec div{
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.therdsec img{
-    width: 100%;
-    border-radius: 12px;
-}
-
-.therdsec div:hover{
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-.therdsec div:hover img{
-    transform: scale(1.1);
-}
-
-/* ================= DESSERT ================= */
-.forthsec{
-    padding: 60px 80px;
-    background-color: #f3e6d8;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 25px;
-}
-
-.forthsech{
-    grid-column: 1/-1;
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 30px;
-}
-
-.forthsec div{
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.forthsec img{
-    width: 100%;
-    border-radius: 12px;
-}
-
-.forthsec div:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-.forthsec div:hover img{
-    transform: scale(1.1);
-}
-
-/* ================= DETAILS SECTION ================= */
-.detelssec{
-    padding: 60px 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.detelssec h1{
-    font-size: 32px;
-}
-
-.detelssec button{
-    margin-top: 15px;
-    padding: 10px 25px;
-    border: none;
-    background-color: #a86b3c;
-    color: white;
-    border-radius: 25px;
-}
-
-.detelssec button:hover{
-    transform: scale(1.05);
-}
-
-/* ================= OFFER ================= */
-.coffeeoff{
-    padding: 60px 80px;
-    background-color: #f3e6d8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.coffeeoff div:nth-child(2){
-    animation: pulse 2.5s infinite;
-}
-
-@keyframes pulse{
-    0%{ transform: scale(1); }
-    50%{ transform: scale(1.03); }
-    100%{ transform: scale(1); }
-}
-
-.coffeeoff input{
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-}
-
-.coffeeoff button{
-    padding: 10px 20px;
-    border: none;
-    background-color: #a86b3c;
-    color: white;
-    border-radius: 20px;
-}
-
-.coffeeoff button:hover{
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ================= FOOTER ================= */
-.foot{
-    background-color: #2e2e2e;
-    color: white;
-    padding: 50px 80px;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 20px;
-}
-
-.foot a{
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    margin-top: 8px;
-    font-size: 14px;
-}
-
-.foot a:hover{
-    color: white;
-    padding-left: 5px;
-}
+        link a:hover::after{
+            width: 100%;
 
 
+        }
+
+        /* herosection*/
+
+        .firstsec{
+            height: 70vh;
+            background: url(https://i.pinimg.com/736x/c2/1e/b6/c21eb6b7f91d507e7d5910982f94742f.jpg)  center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding-left: 100px;
+        }
+        .firstdiv{
+            background-color: rgbe(225,255,255,0.85);
+            padding: 30px;
+            border-radius: 15px;
+            animation: first i.5s ease;
+        }
+        @keyframes first{
+            0%{
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .homep{
+            font-size: 30px;
+            color: white;
+        }
+        .homeh{
+            color: white;
+            font-size: 38px;
+            margin: 10px 0 20px;
+        }
+
+        .homebut{
+            padding: 10px 30px;
+            border: none;
+            background-color: #a86b3c;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .homebut:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        /*icon sectio*/
+        .secondsec{
+            padding: 50px 80px;
+        }
+        .coffeepic{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        .coffeepic img{
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .coffeepic img:hover{
+            transform: rotate(10deg) scale(1.1);
+        }
+        /*coffee item*/
+        .therdsec{
+            padding: 40px 80px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        .therdsec div{
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .therdsec img{
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .therdsec div:hover{
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .therdsec div:hover img{
+            transform: scale(1.1);
+        }
+        /* dessert*/
+        .forthsec{
+            padding: 60px 80px;
+            background-color: #f3e6d8;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 25px;
+        }
+        .forthsech{
+            grid-column: 1/-1;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+        .forthsec div{
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .forthsec img{
+            height: 70%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .forthsec div:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .forthsec div:hover img{
+            transform: scale(1.1);
+        }
+        /* details section*/
+        .detelssec{
+            pad: 60px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+        .detelssec img{
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .detelssec h1{
+            font-size: 32px;
+        }
+        .detelssec button{
+            margin: 15px;
+            padding: 10px 25px;
+            border: none;
+            background-color: #a86b3c;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .detelssec button:hover{
+            transform: scale(1.05);
+        }
+        /*offer section*/
+        .coffeeoff{
+            padding: 60px 80px;
+            background-color: #f3e6d8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+        .coffeeoff img{    /* next section*/
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .coffeeoff div:nth-child(2){
+            animation: pulse 2.5s infinite;
+
+        }
+        @keyframes pulse{
+            0%{transform: scale(1); }
+            50%{transform: scale(1.03); }
+            100%{transform: scale(1); }
+        }
+        .coffeeoff input{
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+        .coffeeoff button{
+            padding: 10px 20px;
+            border: none;
+            background-color: #a86b3c;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .coffeeoff button:hover{
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        /*footer*/
+        .foot{
+            background-color: #141212;
+            color: white;
+            padding: 50px 80px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 5px;
+        }
+        .foot a{
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .foot a:hover{
+            color: white;
+            padding-left: 5px;
+        }
 
     </style>
 </head>
@@ -301,30 +299,30 @@
 
     <section class="secondsec">
         <div class="coffeepic">
-         <img src="" alt="">
-         <img src="" alt="">
-         <img src="" alt="">
-         <img src="" alt="">
+         <img src="https://i.pinimg.com/736x/93/c7/8e/93c78e42ed52dd460f83b4a01125f076.jpg" alt="">
+         <img src="https://i.pinimg.com/736x/42/b3/58/42b358bb942f37df55bf5497ec291e82.jpg" alt="">
+         <img src="https://i.pinimg.com/736x/9a/74/f0/9a74f0360b331b45d276b6ff7b5f4385.jpg" alt="">
+         <img src="https://i.pinimg.com/736x/54/5e/1c/545e1ce35071722cdf7b9fb517d8664b.jpg" alt="">
          </div>
     </section>
     <section class="therdsec">
         <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/1200x/7f/7b/fd/7f7bfdaf4c169573115915116fce9904.jpg" alt="">
             <h4> Lungo coffee</h4>
             <p>Rs.199</p>
         </div>
          <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/736x/cd/bb/32/cdbb32b105230b3fe3fd1bc9a018c32f.jpg" alt="">
             <h4>Dalgana coffee</h4>
             <p>Rs.159</p>
         </div>
          <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/736x/29/59/0d/29590df92f6144131abe9700b3ccd42a.jpg" alt="">
             <h4>Iced coffee</h4>
             <p>Rs.179</p>
         </div>
          <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/736x/cf/07/67/cf076703ffe4adf45113485d11cd0c8b.jpg" alt="">
             <h4>Filler coffee</h4>
             <p>Rs.59</p>
         </div>
@@ -332,42 +330,42 @@
     <section class="forthsec">
         <h1 class="forthsech">Our Special Dessert</h1>
          <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/736x/95/9c/d5/959cd56e989db23af62c32ad5102f95d.jpg" alt="">
             <h4>Gulab jamun</h4>
             <p>Rs.249</p>
         </div>
          <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/1200x/e6/15/57/e61557429e6c93485d738e6682cf17c9.jpg" alt="">
             <h4>Chocolate tiramisu</h4>
             <p>Rs.269</p>
         </div>
          <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/736x/cd/22/86/cd2286421026a39c0f779e01ccbbf6ac.jpg" alt="">
             <h4>Churos</h4>
             <p>Rs.169</p>
         </div>
          <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/736x/2d/23/3f/2d233fafd262e6d34877de625bc01fab.jpg" alt="">
             <h4>australian lamingtons</h4>
             <p>Rs.209</p>
         </div>
     </section>
     <section class="detelssec">
         <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/1200x/79/31/ee/7931ee87f01e24ed34d2be5b14c86824.jpg" alt="">
         </div>
         <div>
             <h1>Check out our best coffee betans</h1>
             <button>explore our product</button>
         </div>
         <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/736x/49/c3/a3/49c3a3bc8cebf55bda73f0d7edb79dba.jpg" alt="">
         </div>
     </section>
     <section class="coffeeoff">
 
         <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/736x/49/c3/a3/49c3a3bc8cebf55bda73f0d7edb79dba.jpg" alt="">
         </div>
         <div>
             <h1>join in and get 15% off</h1>
@@ -375,7 +373,7 @@
             <button type="submit" name="submit" value="submit">Search</button>
         </div>
         <div>
-            <img src="" alt="">
+            <img src="https://i.pinimg.com/1200x/79/31/ee/7931ee87f01e24ed34d2be5b14c86824.jpg" alt="">
         </div>
     </section>
     <footer class="foot">
