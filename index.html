@@ -5,72 +5,284 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>khushi coffee shop</title>
     <style>
-        /* Reset */
-        * {
 
-            margin: 10px 10px;
-            margin-top: 10px;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body{
+    background-color: #f7f2ed;
+    color: #2e2e2e;
+}
+
+/* ================= HEADER ================= */
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #f3e6d8;
+}
+
+.firsth{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.link a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: #2e2e2e;
+    font-weight: 500;
+    position: relative;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #a86b3c;
+}
+
+.link a:hover::after{
+    width: 100%;
+}
+
+/* ================= HERO SECTION ================= */
+.firstsec{
+    height: 70vh;
+    background: url("coffee-bg.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.firstdiv{
+    background: rgba(255,255,255,0.85);
+    padding: 30px;
+    border-radius: 15px;
+    animation: fadeSlide 1.5s ease;
+}
+
+@keyframes fadeSlide{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.homep{
+    color: #a86b3c;
+}
+
+.homeh{
+    font-size: 38px;
+    margin: 10px 0 20px;
+}
+
+.homebut{
+    padding: 10px 30px;
+    border: none;
+    background-color: #a86b3c;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.homebut:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= ICON SECTION ================= */
+.secondsec{
+    padding: 50px 80px;
+}
+
+.coffeepic{
+    display: flex;
+    justify-content: space-between;
+}
+
+.coffeepic img{
+    width: 60px;
+}
+
+.coffeepic img:hover{
+    transform: rotate(10deg) scale(1.2);
+}
+
+/* ================= COFFEE ITEMS ================= */
+.therdsec{
+    padding: 40px 80px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.therdsec div{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.therdsec img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.therdsec div:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.therdsec div:hover img{
+    transform: scale(1.1);
+}
+
+/* ================= DESSERT ================= */
+.forthsec{
+    padding: 60px 80px;
+    background-color: #f3e6d8;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.forthsech{
+    grid-column: 1/-1;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.forthsec div{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.forthsec img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.forthsec div:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.forthsec div:hover img{
+    transform: scale(1.1);
+}
+
+/* ================= DETAILS SECTION ================= */
+.detelssec{
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detelssec h1{
+    font-size: 32px;
+}
+
+.detelssec button{
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    background-color: #a86b3c;
+    color: white;
+    border-radius: 25px;
+}
+
+.detelssec button:hover{
+    transform: scale(1.05);
+}
+
+/* ================= OFFER ================= */
+.coffeeoff{
+    padding: 60px 80px;
+    background-color: #f3e6d8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coffeeoff div:nth-child(2){
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse{
+    0%{ transform: scale(1); }
+    50%{ transform: scale(1.03); }
+    100%{ transform: scale(1); }
+}
+
+.coffeeoff input{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.coffeeoff button{
+    padding: 10px 20px;
+    border: none;
+    background-color: #a86b3c;
+    color: white;
+    border-radius: 20px;
+}
+
+.coffeeoff button:hover{
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= FOOTER ================= */
+.foot{
+    background-color: #2e2e2e;
+    color: white;
+    padding: 50px 80px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+}
+
+.foot a{
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.foot a:hover{
+    color: white;
+    padding-left: 5px;
+}
 
 
-         /* Body */
-        body {
-             background-color: rgb(252, 237, 218);
-            }
-            head {
-                display: flex;
-                justify-content: space-between;
-            }
-            .firsth {
-                font-size: 15px;
-                justify-items: center;
-            }
-            .link a {
-                color: white;
-                text-decoration: none;
-                margin: 25px;
-                justify-content: space-between;
-
-            }
-            .link a:hover {
-                color: black;
-            }
-            firstsec {
-                padding: 40px;
-            }
-            .firstdiv {
-                max-width: 500px;
-            }
-            .homp {
-                font-size: 22px;
-                color: brown;
-                text-align: center;
-            }
-            .homeh {
-                font-size: 30px;
-                text-align: center;
-            }
-            .homebut {
-                padding: 12px 25px;
-                background-color: antiquewhite;
-                color: white;
-                border: none;
-                cursor: pointer;
-                border-radius: 5px;
-            }
-            .homebut:hover {
-                background-color: blueviolet;
-            }
 
     </style>
 </head>
 <body>
-  
-    <section class="firstsec">
-            <header class="head">
+     <header class="head">
         <div>
             <h1 class="firsth">khushi coffee shop</h1>
         </div>
@@ -81,6 +293,8 @@
            <a href="">login</a>
         </div>
     </header>
+  
+    <section class="firstsec">
         <div class="firstdiv">
             <p class="homep">Welcome</p>
             <h2 class="homeh">we serve the ritchest coffee</h2>
@@ -89,15 +303,15 @@
         
     </section>
 
-    <section>
-        <div>
+    <section class="secondsec">
+        <div class="coffeepic">
          <img src="" alt="">
          <img src="" alt="">
          <img src="" alt="">
          <img src="" alt="">
          </div>
     </section>
-    <section>
+    <section class="therdsec">
         <div>
             <img src="" alt="">
             <h4> Lungo coffee</h4>
@@ -119,8 +333,8 @@
             <p>Rs.59</p>
         </div>
     </section>
-    <section>
-        <h1>Our Special Dessert</h1>
+    <section class="forthsec">
+        <h1 class="forthsech">Our Special Dessert</h1>
          <div>
             <img src="" alt="">
             <h4>Gulab jamun</h4>
@@ -142,7 +356,7 @@
             <p>Rs.209</p>
         </div>
     </section>
-    <section>
+    <section class="detelssec">
         <div>
             <img src="" alt="">
         </div>
@@ -154,7 +368,7 @@
             <img src="" alt="">
         </div>
     </section>
-    <section>
+    <section class="coffeeoff">
 
         <div>
             <img src="" alt="">
@@ -168,27 +382,27 @@
             <img src="" alt="">
         </div>
     </section>
-    <footer>
+    <footer class="foot">
         <h3>coffee</h3>
-        <div>
+        <div class="privacy">
             <a href="">PRIVACY</a>
             <a href="">Terms of use</a>
             <a href="">Pirvacy policy</a>
             <a href=""> cookes</a>
         </div>
-        <div>
+        <div class="service">
             <a href="">SERVICES</a>
             <a href="">shop</a>
             <a href="">order</a>
             <a href="">menu</a>
         </div>
-        <div>
+        <div class="about">
             <a href="">About US</a>
             <a href="">find a location</a>
             <a href="">about us</a>
             <a href="">our story</a>
         </div>
-        <div>
+        <div class="information">
             <a href="">INFORMATION</a>
             <a href="">shop</a>
             <a href="">order</a>
