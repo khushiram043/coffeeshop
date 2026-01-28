@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.head-order{
+    background-color: #4b2e2e;
+    padding: 20px;
+    text-align: center;
+}
+
+.first-h{
+    color: #fff;
+    font-size: 32px;
+}
+
+/* Order Section */
+.ordersec{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Form Box */
+.order-form{
+    background-color: #f5f5f5;
+    padding: 25px 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Labels */
+.order-form label{
+    font-weight: bold;
+}
+
+/* Inputs */
+.order-form select,
+.order-form input,
+.order-form textarea{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+.order-form button{
+    width: 100%;
+    padding: 10px;
+    background-color: #4b2e2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.order-form button:hover{
+    background-color: #6f4e37;
+}

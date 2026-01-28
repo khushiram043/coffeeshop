@@ -2,36 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Coffee | Khushi Coffee Shop</title>
-    <link rel="stylesheet" href="pagestyle.css">
+    <link rel="stylesheet" href="order.css">
 </head>
 <body>
 
-<header class="head">
-    <h1 class="firsth">Order Your Coffee</h1>
-</header>
+    <!-- Header -->
+    <header class="head-order">
+        <h1 class="first-h">Order Your Coffee ☕</h1>
+    </header>
 
-<section class="ordersec">
-    <form class="order-form">
+    <!-- Order Section -->
+    <section class="ordersec">
+        <form class="order-form" action="#" method="post">
 
-        <label>Select Coffee</label><br>
-        <select>
-            <option>Lungo Coffee</option>
-            <option>Dalgona Coffee</option>
-            <option>Iced Coffee</option>
-            <option>Filter Coffee</option>
-        </select><br><br>
+            <label for="coffee">Select Coffee</label><br>
+            <select id="coffee" name="coffee" required>
+                <option value="">-- Select --</option>
+                <option value="lungo">Lungo Coffee</option>
+                <option value="dalgona">Dalgona Coffee</option>
+                <option value="iced">Iced Coffee</option>
+                <option value="filter">Filter Coffee</option>
+                <option value="filter">iced brew</option>
+                <option value="filter">Espresso</option>
+                <option value="filter">Decadent Chocolate Milkshake</option>
+                <option value="filter">COFFEE CHOCOLATE </option>
+            </select><br><br>
 
-        <label>Quantity</label><br>
-        <input type="number" min="1" value="1"><br><br>
+            <label for="qty">Quantity</label><br>
+            <input type="number" id="qty" name="quantity" min="1" value="1" required><br><br>
 
-        <label>Delivery Address</label><br>
-        <textarea placeholder="Enter your address"></textarea><br><br>
+            <label for="address">Delivery Address</label><br>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea><br><br>
+            <button type="submit">Place Order</button>
 
-        <button type="submit">Place Order</button>
-    </form>
-</section>
+        </form>
+    </section>
 
+    <script src="pagescript.js"></script>
 </body>
-<script src="pagescript.js"></script>
 </html>

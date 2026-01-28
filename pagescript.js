@@ -32,7 +32,7 @@ const orderForm = document.querySelector(".order-form");
 if (orderForm) {
     orderForm.addEventListener("submit", function (e) {
         e.preventDefault();
-        alert("☕ Your coffee order has been placed successfully!");
+        alert("Your coffee order has been placed successfully!");
         orderForm.reset();
     });
 }
